@@ -1,0 +1,22 @@
+{
+  "name": "Sinem Lojistik",
+  "short_name": "Sinem Lojistik",
+  "description": "Istanbul'dan Diyarbakir'a uzanan yoğun hatta şehirler arası araç taşıma hizmeti.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f2749",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/photo/site-mirror/www.ototasima.com/icon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/photo/site-mirror/www.ototasima.com/apple-icon.jpg",
+      "sizes": "180x180",
+      "type": "image/jpeg"
+    }
+  ]
+}

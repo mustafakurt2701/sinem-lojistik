@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: radial-gradient(circle at top, rgba(148, 163, 184, 0.12), transparent 28%);
+  }
+
+  ::selection {
+    @apply bg-accent text-accent-foreground;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .prose-sinem h2 {
+    @apply mt-12 text-2xl font-bold tracking-tight text-primary;
+  }
+
+  .prose-sinem h3 {
+    @apply mt-8 text-xl font-semibold text-foreground;
+  }
+
+  .prose-sinem p {
+    @apply mt-4 text-base leading-8 text-slate-700;
+  }
+
+  .prose-sinem ul {
+    @apply mt-4 space-y-3 text-slate-700;
+  }
+
+  .prose-sinem li {
+    @apply flex gap-3;
+  }
+}
