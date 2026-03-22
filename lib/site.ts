@@ -4,7 +4,7 @@ export const siteConfig = {
   title: "Sinem Lojistik | Şehirler Arası Araç Taşıma",
   description:
     "İstanbul'dan Diyarbakır'a uzanan yoğun hizmet hattında sigortalı, planlı ve güvenilir şehirler arası araç taşıma çözümleri.",
-  url: "https://www.sinemlojistik.com",
+  url: "https://www.ototasima.com",
   phoneDisplay: "+90 543 542 87 63",
   phoneHref: "tel:+905435428763",
   whatsappHref:

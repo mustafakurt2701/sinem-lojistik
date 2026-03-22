@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
-const siteUrl = "https://www.sinemlojistik.com";
+const siteUrl = "https://www.ototasima.com";
 
 const cityLabelMap = {
   Istanbul: "İstanbul",

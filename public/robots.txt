@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.sinemlojistik.com/sitemap.xml
+Sitemap: https://www.ototasima.com/sitemap.xml
