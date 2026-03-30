@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { PhoneLink } from "@/components/analytics/phone-link";
 import { BlogCard } from "@/components/blog/blog-card";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTABox } from "@/components/cta-box";
@@ -205,12 +206,12 @@ export default async function BlogDetailPage({ params }: { params: Params }) {
                     >
                       Rota sayfasını incele
                     </Link>
-                    <a
+                    <PhoneLink
                       href={siteConfig.phoneHref}
                       className="rounded-xl border border-border px-5 py-3 text-sm font-semibold text-primary"
                     >
                       Hemen Ara
-                    </a>
+                    </PhoneLink>
                   </div>
                 </div>
               ) : null}
@@ -268,12 +269,12 @@ export default async function BlogDetailPage({ params }: { params: Params }) {
                   üzerinden bilgi alın.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-3">
-                  <a
+                  <PhoneLink
                     href={siteConfig.phoneHref}
                     className="rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white"
                   >
                     Hemen Ara
-                  </a>
+                  </PhoneLink>
                   <a
                     href={siteConfig.whatsappHref}
                     target="_blank"
@@ -305,12 +306,12 @@ export default async function BlogDetailPage({ params }: { params: Params }) {
                 <p className="mt-3 text-sm leading-7 text-slate-600">
                   Form yok. Doğrudan arayın veya WhatsApp&apos;tan yazın.
                 </p>
-                <a
+                <PhoneLink
                   href={siteConfig.phoneHref}
                   className="mt-4 block rounded-xl bg-accent px-4 py-3 text-center text-sm font-semibold text-white"
                 >
                   {siteConfig.phoneDisplay}
-                </a>
+                </PhoneLink>
                 <a
                   href={siteConfig.whatsappHref}
                   target="_blank"

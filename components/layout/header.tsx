@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Menu, MessageCircle, PhoneCall, X } from "lucide-react";
 import { useState } from "react";
 
+import { PhoneLink } from "@/components/analytics/phone-link";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { ButtonLink } from "@/components/ui/button";
@@ -45,13 +46,13 @@ export function Header() {
             </nav>
           </div>
           <div className="hidden items-center gap-3 md:flex">
-            <a
+            <PhoneLink
               href={siteConfig.phoneHref}
               className="inline-flex items-center gap-2 text-sm font-semibold text-primary"
             >
               <PhoneCall className="h-4 w-4" />
               {siteConfig.phoneDisplay}
-            </a>
+            </PhoneLink>
             <ButtonLink href={siteConfig.phoneHref} variant="accent" size="sm">
               Hemen Ara
             </ButtonLink>
@@ -93,13 +94,14 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <a
+          <PhoneLink
             href={siteConfig.phoneHref}
             className="flex items-center gap-2 rounded-xl bg-secondary px-3 py-3 text-sm font-semibold text-primary"
+            onClick={() => setIsOpen(false)}
           >
             <PhoneCall className="h-4 w-4" />
             {siteConfig.phoneDisplay}
-          </a>
+          </PhoneLink>
           <a
             href={siteConfig.whatsappHref}
             target="_blank"

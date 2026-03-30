@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { PhoneLink } from "@/components/analytics/phone-link";
 import { siteConfig } from "@/lib/site";
 import { cityLabel, routeTimeline } from "@/src/data/routes";
 
@@ -21,12 +22,12 @@ export function Footer() {
             Istanbul&apos;dan Diyarbakir&apos;a uzanan yoğun hizmet hattında sigortalı,
             planlı ve güven veren şehirler arası araç taşıma çözümleri.
           </p>
-          <a
+          <PhoneLink
             href={siteConfig.phoneHref}
             className="mt-6 block text-xl font-semibold text-white"
           >
             {siteConfig.phoneDisplay}
-          </a>
+          </PhoneLink>
           <a
             href={siteConfig.whatsappHref}
             target="_blank"

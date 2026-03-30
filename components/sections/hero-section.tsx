@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, PhoneCall } from "lucide-react";
 
+import { PhoneLink } from "@/components/analytics/phone-link";
 import { CTAButtons } from "@/components/cta-buttons";
 import { siteConfig } from "@/lib/site";
 
@@ -27,13 +28,13 @@ export function HeroSection() {
             <div className="mt-8">
               <CTAButtons stacked />
             </div>
-            <a
+            <PhoneLink
               href={siteConfig.phoneHref}
               className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white shadow-soft backdrop-blur"
             >
               <PhoneCall className="h-4 w-4 text-accent" />
               Hemen Ara: {siteConfig.phoneDisplay}
-            </a>
+            </PhoneLink>
           </div>
           <div className="relative">
             <div className="absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-br from-accent/25 via-transparent to-primary/10 blur-3xl" />

@@ -1,19 +1,20 @@
 import { MessageCircle, PhoneCall } from "lucide-react";
 
+import { PhoneLink } from "@/components/analytics/phone-link";
 import { siteConfig } from "@/lib/site";
 
 export function StickyMobileCTA() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-white/95 p-3 backdrop-blur md:hidden">
       <div className="grid grid-cols-2 gap-3">
-        <a
+        <PhoneLink
           href={siteConfig.phoneHref}
           className="inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-accent px-4 text-sm font-semibold text-white"
           aria-label={`Ara ${siteConfig.phoneDisplay}`}
         >
           <PhoneCall className="h-4 w-4" />
           Ara
-        </a>
+        </PhoneLink>
         <a
           href={siteConfig.whatsappHref}
           target="_blank"

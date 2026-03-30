@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Clock3, MapPinned, PhoneCall } from "lucide-react";
 
+import { PhoneLink } from "@/components/analytics/phone-link";
 import { CTAButtons } from "@/components/cta-buttons";
 import { RouteTimeline } from "@/components/route-timeline";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
@@ -34,12 +35,12 @@ export default function ContactPage() {
                 Hızlı fiyat almak, rota sormak veya teslim sürecini konuşmak için doğrudan
                 arayın.
               </p>
-              <a
+              <PhoneLink
                 href={siteConfig.phoneHref}
                 className="mt-8 block text-3xl font-semibold text-white"
               >
                 {siteConfig.phoneDisplay}
-              </a>
+              </PhoneLink>
               <div className="mt-6">
                 <CTAButtons stacked />
               </div>

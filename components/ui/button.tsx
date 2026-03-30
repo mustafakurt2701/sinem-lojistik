@@ -1,7 +1,10 @@
+"use client";
+
 import * as React from "react";
 import Link, { type LinkProps } from "next/link";
 import { cva, type VariantProps } from "class-variance-authority";
 
+import { reportPhoneConversion } from "@/lib/phone-conversion";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
@@ -67,8 +70,24 @@ export function ButtonLink({
   const classes = cn(buttonVariants({ variant, size, className }));
 
   if (typeof href === "string" && /^(https?:|tel:|mailto:)/.test(href)) {
+    const isPhoneLink = href.startsWith("tel:");
+
     return (
-      <a className={classes} href={href} {...props}>
+      <a
+        className={classes}
+        href={href}
+        onClick={(event) => {
+          props.onClick?.(event);
+
+          if (event.defaultPrevented || !isPhoneLink) {
+            return;
+          }
+
+          event.preventDefault();
+          reportPhoneConversion(href as `tel:${string}`);
+        }}
+        {...props}
+      >
         {children}
       </a>
     );
