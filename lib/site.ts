@@ -16,7 +16,9 @@ export const siteConfig = {
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? process.env.GOOGLE_SITE_VERIFICATION ?? "",
   googleAnalyticsId:
-    process.env.NEXT_PUBLIC_GA_ID ?? process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? "",
+    process.env.NEXT_PUBLIC_GA_ID ??
+    process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ??
+    "AW-17979367744",
   serviceArea: [
     "Istanbul",
     "Bursa",
