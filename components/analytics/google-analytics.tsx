@@ -30,6 +30,12 @@ export function GoogleAnalytics({ gaId }: GoogleAnalyticsProps) {
               currency: 'TRY',
               event_callback: callback
             });
+            gtag('event', 'conversion', {
+              send_to: 'AW-17979367744/GiWMCIiT3IEcEMDCnf1C',
+              value: 1.0,
+              currency: 'TRY',
+              event_callback: callback
+            });
             return false;
           };
           gtag('js', new Date());
